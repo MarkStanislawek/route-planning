@@ -43,6 +43,7 @@ target_link_libraries(test
 # Set options for Linux or Microsoft Visual C++
 if( ${CMAKE_SYSTEM_NAME} MATCHES "Linux" )
     target_link_libraries(OSM_A_star_search PUBLIC pthread)
+    target_compile_options(OSM_A_star_search PRIVATE -Wall -Wconversion )
 endif()
 
 if(MSVC)
